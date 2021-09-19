@@ -1,0 +1,42 @@
+.score-card {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-score-card-lg-bg.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+.head {
+  font-size: 50px;
+  font-family: 'Lobster';
+  color: #ffffff;
+}
+.score {
+  font-size: 45px;
+  font-family: 'Lobster';
+  color: #ffffff;
+}
+.play-again {
+  background-color: #cf60c8;
+  color: #ffffff;
+  padding: 10px;
+  margin: 25px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+.butt-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.bg {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/match-game-bg.png');
+  background-size: cover;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
