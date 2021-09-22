@@ -256,7 +256,7 @@ class App extends Component {
   state = {
     timer: 60,
     score: 0,
-    activeTabId: tabsList[0].id,
+    activeTabId: tabsList[0].tabId,
     imageToBeSelected: imagesList[Math.ceil(Math.random() * 30)],
     isGameOver: false,
   }
@@ -284,12 +284,16 @@ class App extends Component {
   }
 
   clickThumbnail = id => {
-    const {imageToBeSelected} = this.state
+    const {imageToBeSelected, timer} = this.state
     if (id === imageToBeSelected.id) {
       this.setState(prevState => ({
         score: prevState.score + 1,
         imageToBeSelected: imagesList[Math.ceil(Math.random() * 30)],
       }))
+    } else if (timer === 0) {
+      this.setState({
+        isGameOver: true,
+      })
     } else {
       this.setState({
         isGameOver: true,
@@ -303,27 +307,29 @@ class App extends Component {
 
     return (
       <div className="match-game-container">
-        <div className="main-image-container">
-          <img
-            src={imageToBeSelected.imageUrl}
-            alt={imageToBeSelected.id}
-            className="big-image"
-          />
-        </div>
+        <ul className="main-image-container">
+          <li>
+            <img
+              src={imageToBeSelected.imageUrl}
+              alt="match"
+              className="big-image"
+            />
+          </li>
+        </ul>
         <ul className="tabs-container">
           {tabsList.map(tabDetails => (
             <TabItem
               key={tabDetails.tabId}
               tabDetails={tabDetails}
               updateActiveTabId={this.updateActiveTabId}
-              isActive={tabDetails.tabIId === activeTabId}
+              isActive={tabDetails.tabId === activeTabId}
             />
           ))}
         </ul>
         <ul className="images-thumbs-container">
           {filteredImages.map(eachImage => (
             <ThumbnailItem
-              key={filteredImages.imageUrl}
+              key={filteredImages.id}
               thumbDetails={eachImage}
               clickThumbnail={this.clickThumbnail}
             />
@@ -344,6 +350,7 @@ class App extends Component {
     this.setState({
       imageToBeSelected: imagesList[Math.ceil(Math.random() * 30)],
       timer: 60,
+      score: 0,
     })
   }
 

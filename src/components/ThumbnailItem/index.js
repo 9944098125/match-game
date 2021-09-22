@@ -9,8 +9,14 @@ const ThumbItem = props => {
 
   return (
     <>
-      <li className="thumb-item-container" onClick={onClickThumbnail}>
-        <img className="thumb-item-image" src={thumbnailUrl} alt={id} />
+      <li className="thumb-item-container">
+        <button type="button" onClick={onClickThumbnail}>
+          <img
+            className="thumb-item-image"
+            src={thumbnailUrl}
+            alt="thumbnail"
+          />
+        </button>
       </li>
     </>
   )

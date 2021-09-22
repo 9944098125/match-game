@@ -11,7 +11,7 @@ class Navbar extends Component {
     }
     return (
       <div className="score-container">
-        <h1 className="score-head">Score: </h1>
+        <p className="score-head">Score: </p>
         <h1 className="score">{score}</h1>
       </div>
     )
@@ -37,8 +37,7 @@ class Navbar extends Component {
               alt="timer"
               className="icon"
             />
-            <h1 className="timer">{timer}</h1>
-            <h1 className="seconds">Sec</h1>
+            <p className="timer">{timer} sec</p>
           </div>
         </div>
       </div>

@@ -12,7 +12,6 @@
 .score {
   color: orange;
   font-size: 40px;
-  margin: 5px;
 }
 .header-container {
   display: flex;
@@ -22,7 +21,6 @@
 }
 .image-container {
   margin-left: 30px;
-  margin: 15px;
   padding: 5px;
   display: flex;
   align-items: center;
@@ -32,7 +30,6 @@
   flex-direction: row;
   align-items: center;
   margin-right: 30px;
-  margin: 15px;
 }
 .timer-container {
   display: flex;
@@ -50,7 +47,6 @@
   font-size: 40px;
   font-weight: 700;
   font-style: italic;
-  margin: 5px;
   color: rgba(228, 157, 27, 0.726);
 }
 .icon {

@@ -7,11 +7,10 @@
   font-size: 25px;
   padding: 10px;
   background-color: transparent;
-  border: 0px;
+  border: transparent;
 }
 .active-tab-btn {
   color: #fec653;
-  border-bottom: 3px #fec653;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 800;
 }

@@ -10,7 +10,7 @@ const GameOver = props => {
           src="https://assets.ccbp.in/frontend/react-js/match-game-trophy.png"
           alt="trophy"
         />
-        <h1 className="head">YOUR SCORE</h1>
+        <p className="head">YOUR SCORE</p>
         <p className="score">{score}</p>
         <div className="butt-con">
           <button
