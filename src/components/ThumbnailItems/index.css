@@ -1,0 +1,17 @@
+.thumb-image-list {
+  margin: 15px;
+  list-style-type: none;
+}
+
+.thumb-image {
+  height: 150px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.thumb-button {
+  background-color: transparent;
+  border: 0px none;
+  cursor: pointer;
+}
